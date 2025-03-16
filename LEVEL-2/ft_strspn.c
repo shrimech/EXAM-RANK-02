@@ -9,8 +9,10 @@ size_t	ft_strspn(const char *s, const char *accept)
     {
         j = 0;
         c = 0;
-        while(s[i] == accept[j])
+        while(accept[j])
         {
+            if (s[i] == accept[j])
+                c =1;
             j++;
         }
     }
