@@ -12,8 +12,22 @@ size_t	ft_strspn(const char *s, const char *accept)
         while(accept[j])
         {
             if (s[i] == accept[j])
-                c =1;
+                c = 1;
             j++;
         }
+        if (c == 0)
+            return(i); 
+        i++;
     }
+    return(i);
 }
+// #include <stdio.h>
+// int main()
+// {
+// 	char s[50] = "192ellff5454o";
+// 	const char accept[150] = "103998945";
+//     size_t i =ft_strspn(s, accept);
+//     size_t j = strspn(s, accept);
+// 	printf("%d----%d\n", i,j);
+
+// }
